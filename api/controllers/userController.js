@@ -29,11 +29,20 @@ exports.createUser = async (req, res) => {
 }
 
 exports.getAllUser = async (req, res) => {
-    let getUsers = await User.find({})
-    return res.json({
-        message: "Success!",
-        response: getUsers
-    })
+    try{
+
+        let getUsers = await User.find({})
+        return res.json({
+            message: "Success!",
+            response: getUsers
+        })
+    } catch(err) {
+        console.log(err)
+        res.status(500).send({
+            msg: err.message,
+            status: 500
+        })
+    }
 }
 
 exports.getSingleUser = async (req, res) => {
