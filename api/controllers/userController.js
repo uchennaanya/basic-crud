@@ -52,7 +52,7 @@ exports.getSingleUser = async (req, res) => {
             message: "Success!",
             response: getUsers
         })
-    } catch () {
+    } catch (err) {
         console.log(err)
     }
 }
