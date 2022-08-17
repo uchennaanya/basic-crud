@@ -11,7 +11,7 @@ require('./api/db/db').connect()
 
 app.get('/', (req, res) => {
     return res.json({
-        status: "Sucess",
+        status: "Success",
         message: "Welcome to CRUDApp"
     })
 })

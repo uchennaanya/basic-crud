@@ -78,7 +78,7 @@ deleteUser = async (req, res) => {
     try {
         let deleteuser = await User.findByIdAndDelete({ _id: req.params.id })
         return res.json({
-            message: "Sucess",
+            message: "Success",
             response: deleteuser
         })
 
